@@ -2,7 +2,7 @@ Module.register("MMM-Countdown",{
 	// Default module config.
 	defaults: {
         date: "3000-01-01",
-        event: "Countdown"
+        event: "Countdown",
 	},
 
     // Define required scripts.
