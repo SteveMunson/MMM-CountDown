@@ -29,22 +29,17 @@ Module.register("MMM-Countdown",{
 
 		var wrapper = document.createElement("div");
 
-//		const line = document.createElement("table");
-//		line.className = this.config.tableClass;
-
-//		const row = document.createElement("span");
 		const number = document.createElement("span");
 		const interval = document.createElement("span");
 
 		number.className = "bright xlarge regular";
-		interval.className = "normal large dimmed";
+		interval.className = "dimmed medium thin";
 
         number.innerHTML = days
         interval.innerHTML = ' days'
 		
 		wrapper.appendChild(number)
 		wrapper.appendChild(interval)
-//		wrapper.appendChild(line);
 
 		return wrapper;
 	}
