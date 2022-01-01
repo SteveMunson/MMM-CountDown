@@ -20,6 +20,12 @@ Module.register("MMM-Countdown",{
         this.data.header = this.config.event;
 	},
 	
+	getStyles: function() {
+		return [
+			this.file('MMM-Countdown.css') // this file will be loaded straight from the module folder.
+		]
+	},
+
     // Override dom generator
 	getDom: function() {
         var today = new Date(Date.now());
