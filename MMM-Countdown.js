@@ -40,9 +40,10 @@ Module.register("MMM-Countdown",{
 
         timeWrapper.innerHTML = days
         intervalWrapper.innerHTML = ' days'
-
+		
+		timeWrapper.appendChild(intervalWrapper)
         wrapper.appendChild(timeWrapper);
-        wrapper.appendChild(intervalWrapper);
+        //wrapper.appendChild(intervalWrapper);
 
 		return wrapper;
 	}
