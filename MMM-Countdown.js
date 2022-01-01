@@ -22,32 +22,29 @@ Module.register("MMM-Countdown",{
 	
     // Override dom generator
 	getDom: function() {
-		var wrapper = document.createElement("div");
-
-		const line = document.createElement("table");
-		line.className = this.config.tableClass;
-
-		const row = document.createElement("tr");
-		const numberCell = document.createElement("td");
-		const intervalCell = document.createElement("td");
-
-		numberCell.className = "bright xlarge regular";
-		intervalCell.className = "normal large dimmed";
-
         var today = new Date(Date.now());
 		var target = new Date(this.config.date);
 		var timeDiff = target - today;
+        var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
-        var diffDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+		var wrapper = document.createElement("div");
 
-        var days = diffDays
+//		const line = document.createElement("table");
+//		line.className = this.config.tableClass;
 
-        numberCell.innerHTML = days
-        intervalCell.innerHTML = ' days'
+//		const row = document.createElement("span");
+		const number = document.createElement("span");
+		const interval = document.createElement("span");
+
+		number.className = "bright xlarge regular";
+		interval.className = "normal large dimmed";
+
+        number.innerHTML = days
+        interval.innerHTML = ' days'
 		
-		line.appendChild(numberCell)
-		line.appendChild(intervalCell)
-		wrapper.appendChild(line);
+		wrapper.appendChild(number)
+		wrapper.appendChild(interval)
+//		wrapper.appendChild(line);
 
 		return wrapper;
 	}
