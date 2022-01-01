@@ -8,7 +8,7 @@ cd ~/MagicMirror/modules
 
 Clone this repository:
 ````
-git clone https://github.com/stevemunson/MMM-Countdown.git
+git clone https://github.com/SteveMunson/MMM-Countdown.git
 ````
 
 Install the module dependencies:
