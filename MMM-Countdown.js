@@ -24,11 +24,18 @@ Module.register("MMM-Countdown",{
 	getDom: function() {
 		var wrapper = document.createElement("div");
 
-        var timeWrapper = document.createElement("div");
-        var intervalWrapper = document.createElement("div");
+		const line = document.createElement("table");
+		line.className = this.config.tableClass;
 
-		timeWrapper.className = "bright xlarge regular";
-        intervalWrapper.className = "normal large light";
+		const row = document.createElement("tr");
+		const numberCell = document.createElement("td");
+		const intervalCell = document.createElement("td");
+
+//		var timeWrapper = document.createElement("div");
+//		var intervalWrapper = document.createElement("div");
+
+		numberCell.className = "bright xlarge regular";
+		intervalCell.className = "normal large dimmed";
 
         var today = new Date(Date.now());
 		var target = new Date(this.config.date);
@@ -38,11 +45,13 @@ Module.register("MMM-Countdown",{
 
         var days = diffDays
 
-        timeWrapper.innerHTML = days
-        intervalWrapper.innerHTML = ' days'
+        numberCell.innerHTML = days
+        intervalCell.innerHTML = ' days'
 		
-		timeWrapper.appendChild(intervalWrapper)
-        wrapper.appendChild(timeWrapper);
+//		timeWrapper.appendChild(intervalWrapper)
+		line.appendChild(numberCell)
+		line.appendChild(intervalCell)
+		wrapper.appendChild(line);
         //wrapper.appendChild(intervalWrapper);
 
 		return wrapper;
