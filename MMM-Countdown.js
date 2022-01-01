@@ -20,7 +20,7 @@ Module.register("MMM-Countdown",{
         this.data.header = this.config.event;
 	},
 	
-    // Override dom generator.
+    // Override dom generator
 	getDom: function() {
 		var wrapper = document.createElement("div");
 
@@ -30,9 +30,6 @@ Module.register("MMM-Countdown",{
 		const row = document.createElement("tr");
 		const numberCell = document.createElement("td");
 		const intervalCell = document.createElement("td");
-
-//		var timeWrapper = document.createElement("div");
-//		var intervalWrapper = document.createElement("div");
 
 		numberCell.className = "bright xlarge regular";
 		intervalCell.className = "normal large dimmed";
@@ -48,11 +45,9 @@ Module.register("MMM-Countdown",{
         numberCell.innerHTML = days
         intervalCell.innerHTML = ' days'
 		
-//		timeWrapper.appendChild(intervalWrapper)
 		line.appendChild(numberCell)
 		line.appendChild(intervalCell)
 		wrapper.appendChild(line);
-        //wrapper.appendChild(intervalWrapper);
 
 		return wrapper;
 	}
