@@ -27,8 +27,8 @@ Module.register("MMM-Countdown",{
         var timeWrapper = document.createElement("div");
         var intervalWrapper = document.createElement("div");
 
-		timeWrapper.className = "time bright xlarge light";
-        intervalWrapper.className = "normal large";
+		timeWrapper.className = "bright xlarge regular";
+        intervalWrapper.className = "normal large light";
 
         var today = new Date(Date.now());
 		var target = new Date(this.config.date);
