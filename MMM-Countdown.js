@@ -33,7 +33,7 @@ Module.register("MMM-Countdown",{
 		const interval = document.createElement("span");
 
 		number.className = "normal xlarge regular";
-		interval.className = "dimmed large thin";
+		interval.className = "dimmed medium thin";
 
         number.innerHTML = days
         interval.innerHTML = ' days'
