@@ -40,5 +40,5 @@ The following properties can be configured:
 
 |Option|Default|Description|
 |---|---|---|
-|`date`|`"3000-01-01"`|The date to countdown to.|
+|`date`|`3000-01-01`|The date to countdown to.|
 |`event`|`Countdown`|The title of the countdown timer.|
