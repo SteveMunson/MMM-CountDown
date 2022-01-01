@@ -23,10 +23,12 @@ Module.register("MMM-Countdown",{
     // Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-//		wrapper.innerHTML = this.config.text;
 
         var timeWrapper = document.createElement("div");
-        timeWrapper.className = "time bright xlarge light";
+        var intervalWrapper = document.createElement("div");
+
+		timeWrapper.className = "time bright xlarge light";
+        intervalWrapper.className = "time normal large light";
 
         var today = new Date(Date.now());
 		var target = new Date(this.config.date);
@@ -36,9 +38,11 @@ Module.register("MMM-Countdown",{
 
         var days = diffDays
 
-        timeWrapper.innerHTML = days + ' days'
+        timeWrapper.innerHTML = days
+        intervalWrapper.innerHTML = ' days'
 
         wrapper.appendChild(timeWrapper);
+        wrapper.appendChild(intervalWrapper);
 
 		return wrapper;
 	}
